@@ -1,5 +1,6 @@
-package com.example.androidstarter.features.list.data
+package com.example.androidstarter.features.list.data.network
 
+import com.example.androidstarter.features.list.data.network.dto.PlantDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 

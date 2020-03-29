@@ -1,7 +1,7 @@
 package com.example.androidstarter.features.list.di
 
 import com.example.androidstarter.di.PerApp
-import com.example.androidstarter.features.list.data.PlantsApi
+import com.example.androidstarter.features.list.data.network.PlantsApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

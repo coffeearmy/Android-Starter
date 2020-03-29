@@ -1,4 +1,4 @@
-package com.example.androidstarter.features.list.domain
+package com.example.androidstarter.features.list.domain.model
 
 class Plant(
     slug: String = "",

@@ -1,4 +1,4 @@
-package com.example.androidstarter.features.list
+package com.example.androidstarter.features.list.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

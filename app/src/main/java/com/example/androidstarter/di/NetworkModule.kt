@@ -1,7 +1,8 @@
 package com.example.androidstarter.di
 
 import com.example.androidstarter.BuildConfig
-import com.example.androidstarter.features.list.data.PlantsApi
+import com.example.androidstarter.features.list.data.network.PlantsApi
+import com.example.androidstarter.network.AuthInterceptor
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -17,7 +18,7 @@ class NetworkModule {
     @Provides
     @Singleton
     internal fun provideNetworkClient(): Retrofit{
-        val baseUrl ="www"
+        val baseUrl ="https://trefle.io/api/"
         val loggingInterceptor = HttpLoggingInterceptor()
 
         if (BuildConfig.DEBUG) {
@@ -29,6 +30,7 @@ class NetworkModule {
         val okHttpClient = OkHttpClient().newBuilder()
             .readTimeout(60, TimeUnit.SECONDS)
             .connectTimeout(10, TimeUnit.SECONDS)
+            .addInterceptor(AuthInterceptor())
             .addInterceptor(loggingInterceptor)
             .build()
 
