@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.list.ui.MainActivity">
+    tools:context=".features.list.ui.PlantListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/base_recycler"
+        android:id="@+id/plant_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

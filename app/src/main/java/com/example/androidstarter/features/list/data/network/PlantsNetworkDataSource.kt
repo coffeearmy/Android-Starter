@@ -7,7 +7,7 @@ import javax.inject.Inject
 class PlantsNetworkDataSource @Inject constructor(
     private val plantApi: PlantsApi,
     private val plantsMapper: PlantsMapper){
-    suspend fun getPlants(): List<Plant> {
-        return plantApi.getAllPlants("plantica").map { plantsMapper.mapToModel(it) }
+    suspend fun getPlants(genus: String): List<Plant> {
+        return plantApi.getAllPlants(genus).map { plantsMapper.mapToModel(it) }
     }
 }

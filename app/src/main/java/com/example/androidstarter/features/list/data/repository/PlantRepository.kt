@@ -7,7 +7,7 @@ import com.example.androidstarter.features.list.data.network.mapper.PlantsMapper
 import javax.inject.Inject
 
 class PlantRepository  @Inject constructor(private val plantsNetworkDataSource: PlantsNetworkDataSource) {
-    suspend fun getPlants(): List<Plant> {
-        return plantsNetworkDataSource.getPlants()
+    suspend fun getPlants(genus: String): List<Plant> {
+        return plantsNetworkDataSource.getPlants(genus)
     }
 }

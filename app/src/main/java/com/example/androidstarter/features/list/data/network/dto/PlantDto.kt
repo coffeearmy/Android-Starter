@@ -16,22 +16,22 @@ import com.google.gson.annotations.SerializedName
 class PlantDto {
     @SerializedName("slug")
     @Expose
-    private val slug: String = ""
+    val slug: String = ""
     @SerializedName("scientific_name")
     @Expose
-    private val scientificName: String = ""
+    val scientificName: String = ""
     @SerializedName("link")
     @Expose
-    private val link: String = ""
+    val link: String = ""
     @SerializedName("id")
     @Expose
-    private val id: Int = -1
+    val id: Int = -1
     @SerializedName("complete_data")
     @Expose
-    private val completeData: Boolean = false
+    val completeData: Boolean = false
     @SerializedName("common_name")
     @Expose
-    private val commonName: String = ""
+    val commonName: String = ""
 }
 
 
