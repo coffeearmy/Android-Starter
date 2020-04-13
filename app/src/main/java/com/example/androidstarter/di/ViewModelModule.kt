@@ -2,14 +2,13 @@ package com.example.androidstarter.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.androidstarter.features.list.ui.PlantListViewModel
+import com.example.androidstarter.features.list.ui.ListViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
 import dagger.multibindings.IntoMap
 import javax.inject.Inject
 import javax.inject.Provider
-import javax.inject.Singleton
 import kotlin.reflect.KClass
 
 
@@ -35,6 +34,6 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(PlantListViewModel::class)
-    internal abstract fun providePlantListViewModel(viewModel: PlantListViewModel): ViewModel
+    @ViewModelKey(ListViewModel::class)
+    internal abstract fun providePlantListViewModel(viewModel: ListViewModel): ViewModel
 }

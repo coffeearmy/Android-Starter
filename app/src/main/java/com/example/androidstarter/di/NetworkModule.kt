@@ -3,7 +3,6 @@ package com.example.androidstarter.di
 import android.content.Context
 import com.example.androidstarter.BuildConfig
 import com.example.androidstarter.R
-import com.example.androidstarter.features.list.data.network.PlantsApi
 import com.example.androidstarter.network.AuthInterceptor
 import dagger.Module
 import dagger.Provides
@@ -11,17 +10,15 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.security.AccessControlContext
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
-import javax.inject.Singleton
 
 @Module
 class NetworkModule {
 
     @Provides
     internal fun provideNetworkClient(authInterceptor: AuthInterceptor): Retrofit{
-        val baseUrl ="https://trefle.io/api/"
+        val baseUrl ="https://api.unsplash.com/"
         val loggingInterceptor = HttpLoggingInterceptor()
 
         if (BuildConfig.DEBUG) {

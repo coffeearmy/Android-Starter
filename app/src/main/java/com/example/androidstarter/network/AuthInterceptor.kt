@@ -11,7 +11,7 @@ class AuthInterceptor @Inject constructor(@Named("apiKey") private val apiKey: S
         var request = chain.request()
         val originalHttpUrl: HttpUrl = request.url
         val url = originalHttpUrl.newBuilder()
-            .addQueryParameter("token", apiKey)
+            .addQueryParameter("client_id", apiKey)
             .build()
 
         request = request?.newBuilder()
