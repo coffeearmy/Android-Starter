@@ -26,7 +26,6 @@ class EntryListAdapter : RecyclerView.Adapter<EntryListAdapter.EntryViewHolder>(
     }
 
     fun setItems(list: List<Entry>) {
-        this.list.clear()
         this.list.addAll(list)
     }
 

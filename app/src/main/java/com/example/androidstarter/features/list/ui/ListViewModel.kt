@@ -9,6 +9,10 @@ import com.example.androidstarter.features.list.domain.usecase.GetListItemsUseCa
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
+enum class Colors{
+   white, yellow, orange, red, purple, magenta, green, teal, blue, black
+}
+
 class ListViewModel @Inject constructor(
     private var getListItemsUseCase: GetListItemsUseCase
 ) : ViewModel() {
@@ -19,8 +23,11 @@ class ListViewModel @Inject constructor(
     fun getPlantList() {
         plantListLiveData = liveData(Dispatchers.IO) {
             emit(ViewState.Loading)
-            val list = getListItemsUseCase.invoke("black")
-            emit(ViewState.Success(list))
+
+            Colors.values().forEach {
+                val list =getListItemsUseCase.invoke(it.name)
+                emit(ViewState.Success(list))
+            }
         }
     }
 

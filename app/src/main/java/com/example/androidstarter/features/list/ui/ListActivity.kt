@@ -1,11 +1,14 @@
 package com.example.androidstarter.features.list.ui
 
 import android.os.Bundle
+import android.view.animation.GridLayoutAnimationController
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidstarter.App
 import com.example.androidstarter.databinding.ListBinding
@@ -26,7 +29,8 @@ class ListActivity : AppCompatActivity() {
         setContentView(binding.root)
         adapterEntry = EntryListAdapter()
         binding.list.apply {
-            layoutManager = LinearLayoutManager(this@ListActivity)
+            layoutManager = StaggeredGridLayoutManager(2,RecyclerView.VERTICAL)
+                //GridLayoutManager(this@ListActivity, 2, RecyclerView.VERTICAL, false)
             adapter = adapterEntry
         }
 

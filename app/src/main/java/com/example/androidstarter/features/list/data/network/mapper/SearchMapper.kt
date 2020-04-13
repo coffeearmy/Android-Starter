@@ -12,7 +12,7 @@ class SearchMapper @Inject constructor() {
             height = result.height,
             width = result.width,
             color = result.color,
-            regularUrl = result.urls.regular
+            regularUrl = result.urls.thumb
         )
     }
 }
