@@ -1,5 +1,7 @@
 package com.example.androidstarter.features.list.ui
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +11,6 @@ import com.example.androidstarter.features.list.domain.model.Entry
 
 class EntryListAdapter : RecyclerView.Adapter<EntryListAdapter.EntryViewHolder>() {
     val list: MutableList<Entry> = mutableListOf()
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntryViewHolder =
         EntryViewHolder(
             ListItemBinding.inflate(
@@ -20,7 +21,6 @@ class EntryListAdapter : RecyclerView.Adapter<EntryListAdapter.EntryViewHolder>(
         )
 
     override fun getItemCount(): Int = list.size
-
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
         holder.bind(list[position])
     }
@@ -33,7 +33,11 @@ class EntryListAdapter : RecyclerView.Adapter<EntryListAdapter.EntryViewHolder>(
         private val binding: ListItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(entry: Entry) {
-            Glide.with(binding.imageItem).load(entry.regularUrl).into(binding.imageItem)
+            Glide.with(binding.imageItem)
+                .load(entry.regularUrl)
+                .override(400, 400)
+                .placeholder(ColorDrawable(Color.parseColor(entry.color)))
+                .into(binding.imageItem)
         }
     }
 }

@@ -22,15 +22,17 @@ class ListActivity : AppCompatActivity() {
     private lateinit var adapterEntry: EntryListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (applicationContext as App).appComponent.inject(this)
+        (applicationContext as App)
+            .appComponent.listComponent().create().inject(this)
+
         super.onCreate(savedInstanceState)
         binding = ListBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
         adapterEntry = EntryListAdapter()
         binding.list.apply {
-            layoutManager = StaggeredGridLayoutManager(2,RecyclerView.VERTICAL)
-                //GridLayoutManager(this@ListActivity, 2, RecyclerView.VERTICAL, false)
+            layoutManager = GridLayoutManager(this@ListActivity, 3, RecyclerView.VERTICAL, false)
             adapter = adapterEntry
         }
 

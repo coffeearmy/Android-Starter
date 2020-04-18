@@ -1,17 +1,21 @@
 package com.example.androidstarter.di
 
 import android.content.Context
+import com.example.androidstarter.features.list.di.ListComponent
 import com.example.androidstarter.features.list.di.ListModule
-import com.example.androidstarter.features.list.ui.ListActivity
+import com.example.androidstarter.features.list.di.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
-@Component(modules = [AppModule::class, NetworkModule::class, ListModule::class, ViewModelModule::class])
+@Singleton
+@Component(modules = [NetworkModule::class, ListModule::class, ViewModelModule::class])
 interface AppComponent {
     @Component.Factory
     interface Factory {
         fun create(@BindsInstance applicationContext: Context): AppComponent
     }
 
-    fun inject(activity : ListActivity)
+    fun listComponent(): ListComponent.Factory
+
 }

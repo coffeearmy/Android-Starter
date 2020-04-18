@@ -1,4 +1,4 @@
-package com.example.androidstarter.di
+package com.example.androidstarter.features.list.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -27,7 +27,7 @@ class ViewModelFactory @Inject constructor(private val viewModels: MutableMap<Cl
 @MapKey
 internal annotation class ViewModelKey(val value: KClass<out ViewModel>)
 
-@Module
+@Module(subcomponents = [ListComponent::class])
 abstract class ViewModelModule {
     @Binds
     internal abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

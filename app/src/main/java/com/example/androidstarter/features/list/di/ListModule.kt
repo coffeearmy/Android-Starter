@@ -5,11 +5,6 @@ import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 
-@Module
+@Module(subcomponents = [ListComponent::class])
 class ListModule{
-
-    @Provides
-    fun provideListRestClient(retrofit: Retrofit): SearchApi {
-        return retrofit.create(SearchApi::class.java)
-    }
 }
