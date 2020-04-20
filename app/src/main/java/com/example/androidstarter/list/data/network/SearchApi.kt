@@ -1,6 +1,6 @@
-package com.example.androidstarter.features.list.data.network
+package com.example.androidstarter.list.data.network
 
-import com.example.androidstarter.features.list.data.network.dto.SearchResultDto
+import com.example.androidstarter.list.data.network.dto.SearchResultDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

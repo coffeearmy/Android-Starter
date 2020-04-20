@@ -1,4 +1,4 @@
-package com.example.androidstarter.features.list.data.network.dto
+package com.example.androidstarter.list.data.network.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

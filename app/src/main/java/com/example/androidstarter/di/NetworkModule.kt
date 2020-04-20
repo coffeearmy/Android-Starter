@@ -3,7 +3,7 @@ package com.example.androidstarter.di
 import android.content.Context
 import com.example.androidstarter.BuildConfig
 import com.example.androidstarter.R
-import com.example.androidstarter.features.list.data.network.SearchApi
+import com.example.androidstarter.list.data.network.SearchApi
 import com.example.androidstarter.network.AuthInterceptor
 import dagger.Module
 import dagger.Provides

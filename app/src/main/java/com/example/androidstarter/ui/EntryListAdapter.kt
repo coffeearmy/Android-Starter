@@ -1,4 +1,4 @@
-package com.example.androidstarter.features.list.ui
+package com.example.androidstarter.ui
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.androidstarter.databinding.ListItemBinding
-import com.example.androidstarter.features.list.domain.model.Entry
+import com.example.androidstarter.list.domain.model.Entry
 
 class EntryListAdapter : RecyclerView.Adapter<EntryListAdapter.EntryViewHolder>() {
     val list: MutableList<Entry> = mutableListOf()

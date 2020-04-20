@@ -1,6 +1,6 @@
-package com.example.androidstarter.features.list.domain.usecase
+package com.example.androidstarter.list.domain.usecase
 
-import com.example.androidstarter.features.list.data.repository.ListRepository
+import com.example.androidstarter.list.data.repository.ListRepository
 import javax.inject.Inject
 
 class GetListItemsUseCase @Inject constructor(private val plantsRepository: ListRepository) {

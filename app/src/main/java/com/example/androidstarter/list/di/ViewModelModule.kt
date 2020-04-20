@@ -1,8 +1,8 @@
-package com.example.androidstarter.features.list.di
+package com.example.androidstarter.list.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.androidstarter.features.list.ui.ListViewModel
+import com.example.androidstarter.ui.ListViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module

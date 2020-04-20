@@ -1,7 +1,7 @@
-package com.example.androidstarter.features.list.di
+package com.example.androidstarter.list.di
 
 import com.example.androidstarter.di.PerActivity
-import com.example.androidstarter.features.list.ui.ListActivity
+import com.example.androidstarter.ui.ListActivity
 import dagger.Subcomponent
 
 @PerActivity

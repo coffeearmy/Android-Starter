@@ -1,4 +1,4 @@
-package com.example.androidstarter.features.list.domain.model
+package com.example.androidstarter.list.domain.model
 
 class Entry (
      val id: String,

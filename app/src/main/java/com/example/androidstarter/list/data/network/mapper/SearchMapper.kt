@@ -1,7 +1,7 @@
-package com.example.androidstarter.features.list.data.network.mapper
+package com.example.androidstarter.list.data.network.mapper
 
-import com.example.androidstarter.features.list.data.network.dto.ResultDto
-import com.example.androidstarter.features.list.domain.model.Entry
+import com.example.androidstarter.list.data.network.dto.ResultDto
+import com.example.androidstarter.list.domain.model.Entry
 import javax.inject.Inject
 
 class SearchMapper @Inject constructor() {

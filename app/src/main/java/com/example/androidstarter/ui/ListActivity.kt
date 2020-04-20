@@ -1,13 +1,10 @@
-package com.example.androidstarter.features.list.ui
+package com.example.androidstarter.ui
 
 import android.os.Bundle
-import android.view.animation.GridLayoutAnimationController
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidstarter.App
