@@ -12,6 +12,7 @@ import com.example.androidstarter.databinding.ListBinding
 import javax.inject.Inject
 
 class ListActivity : AppCompatActivity() {
+
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
     lateinit var viewModel: ListViewModel

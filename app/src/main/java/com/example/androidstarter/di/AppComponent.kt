@@ -2,6 +2,7 @@ package com.example.androidstarter.di
 
 import android.content.Context
 import com.example.androidstarter.features.list.di.ListModule
+import com.example.androidstarter.features.list.ui.compose.ComposeActivity
 import com.example.androidstarter.features.list.ui.ListActivity
 import dagger.BindsInstance
 import dagger.Component
@@ -14,4 +15,5 @@ interface AppComponent {
     }
 
     fun inject(activity : ListActivity)
+    fun inject(activity : ComposeActivity)
 }
